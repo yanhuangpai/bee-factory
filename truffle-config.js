@@ -6,13 +6,19 @@ module.exports = {
       port: 9545,
       network_id: "4020",
       gasPrice: "10000000000", //10 gwei
+    },
+    infinity: {
+      host: "47.52.211.206",
+      port: 8545,
+      network_id: "5",
+      gasPrice: "10000000000", //10 gwei
     }
   },
 
   compilers: {
     solc: {
       version: "0.6.12",    // Fetch exact version from solc-bin (default: truffle's version)
-      docker: true,
+      docker: false,
       settings: {
         optimizer: {
           enabled: true,
@@ -24,6 +30,6 @@ module.exports = {
   },
 
   db: {
-    enabled: true
+    enabled: false
   }
 };

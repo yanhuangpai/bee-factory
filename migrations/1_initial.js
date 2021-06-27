@@ -29,7 +29,7 @@ async function createSimpleSwapFactoryContract(erc20ContractAddress, creatorAcco
 }
 
 module.exports = function (deployer, network, accounts) {
-  deployer.deploy(ERC20PresetMinterPauser, "Swarm Token", "BZZ").then(async () => {
+  deployer.deploy(ERC20PresetMinterPauser, "Infinity Token", "IFI").then(async () => {
     await createSimpleSwapFactoryContract(ERC20PresetMinterPauser.address, accounts[0])
   });
 };
